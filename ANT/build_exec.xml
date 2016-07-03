@@ -1,0 +1,12 @@
+<project name="test" default="test">
+
+<target name="test" >
+
+<echo>
+this task for open a file
+</echo>
+<exec os="Windows 10" executable="cmd.exe">
+<arg line="/e photos"/>
+</exec>
+</target>
+</project>

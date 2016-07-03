@@ -1,0 +1,10 @@
+<project name="test" default="A" >
+
+  <target name="A" >
+   
+        <echo>
+           this is my first ant script inside the target A
+        </echo>
+	</target>
+	
+</project>

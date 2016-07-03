@@ -1,0 +1,30 @@
+<project name="test" default="C" >
+
+  <target name="A" >
+   
+        <echo>
+           this is my first ant script inside the target A
+        </echo>
+	</target>
+	
+	<target name="B" >
+
+         <echo>
+            this is my first ant script inside the target B
+         </echo>
+   </target>
+   
+   
+   <target name="C" depends="A,B" >
+
+         <echo>
+            this is my first ant script inside the target C
+         </echo>
+   </target>
+
+  
+   
+
+</project>
+   
+        		   

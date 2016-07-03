@@ -1,0 +1,28 @@
+<project name="test" default="package" >
+
+  <target name="clean" >
+  <delete dir="venkat"/>
+  </target>
+  <target name="compile" depends="clean" >
+  <echo>
+  this is compiling task
+  </echo>
+  <mkdir dir="venkat/classes"/>
+<javac srcdir="src" destdir="venkat/classes"/>
+  </target>
+  
+ <target name="package" depends="compile" >
+ <echo>
+   this is inside of package
+   </echo>
+   <jar basedir="venkat/classes" destfile="venkat/jar/Helloworld.jar" />
+   
+  
+   </target>
+   <target name="run" depends="package" >
+   <echo>
+   this is inside of run task
+   </echo>
+    <java jar="venkat/jar/Helloworld.jar" fork='true' />
+    </target>
+   </project>

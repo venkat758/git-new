@@ -1,0 +1,28 @@
+<project name="test" default="A" >
+
+  <target name="A" >
+   
+        <echo>
+           this is my first ant script inside the target A
+        </echo>
+		<!-- <mkdir dir="venkat/reddy/svr"/>  
+		<delete dir="venkat"/> 
+		<delete file="mymainfest"/>  
+		<copy file="new.txt" tofile="new1.txt"/>   
+		
+	<copy file="new.txt" todir="build"/>  
+	
+	<copy todir="build">
+	<fileset dir="src"/>
+	</copy>  -->
+	
+	<copy todir="build">
+	<fileset dir="src">
+	<include name="*.java"/>
+	</fileset>
+	</copy>
+	
+	
+	</target>
+	
+</project>
