@@ -1,0 +1,24 @@
+<project name="test" default="delete">
+
+<target name="test" >
+
+<echo>
+this task for zip a file
+</echo>
+ <zip basedir="venkat" destfile="venkat.zip"/>
+ </target>
+ 
+ 
+ <target name="unzip" depends="test">
+<unzip src="venkat.zip" dest="venkat" />
+</target>
+
+
+<target name="delete" depends="unzip" >
+<echo> this is in side of delete task
+</echo>
+<delete file="venkat.zip" />
+</target>
+
+
+</project>
